@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <div id="initial-screen">
+        <div class="form-group">
+            <label for="epic">EPIC No:</label>
+            <input type="text" id="epic" placeholder="Enter EPIC No">
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="text" id="dob" placeholder="Enter Date of Birth">
+        </div>
+        <button class="btn" onclick="generateOtp()">Generate OTP</button>
+    </div>
+    <div id="otp-screen" style="display: none;">
+        <div class="form-group">
+            <label for="otp">Enter OTP:</label>
+            <input type="text" id="otp" placeholder="Enter OTP">
+        </div>
+        <button class="btn" onclick="verifyOtp()">Verify OTP</button>
+        <div id="status" class="status"></div>
+    </div>
+    <div id="voting-screen" style="display: none;">
+        <div class="voting-buttons">
+            <button onclick="vote('AAP')">AAP</button>
+            <button onclick="vote('TMC')">TMC</button>
+            <button onclick="vote('BJP')">BJP</button>
+            <button onclick="vote('Cong')">Cong</button>
+        </div>
+    </div>
+    <div id="confirmation-screen" style="display: none;">
+        <h2>Thank you for voting!</h2>
+        <p>Your vote has been recorded.</p>
+    </div>
+</div>
+<script src="scripts.js"></script>
+</body>
+</html>
